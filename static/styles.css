@@ -1,0 +1,546 @@
+body {
+  /* font-family: verdana; */
+  /* font-family: 'Questrial', sans-serif; */
+  /* font-family: 'Oxygen', sans-serif; */
+  /* font-family: 'Chakra Petch', sans-serif; */
+  /* font-family: 'Noto Sans Bengali', sans-serif; */
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Reem Kufi', sans-serif;
+  /* font-family: 'Abril Fatface', cursive; */
+  /* font-family: 'Anek Latin', sans-serif;  */
+  /* font-family: verdana; */
+
+
+
+
+  /* min-width: 100%;   */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  margin: 1rem;
+}
+p {
+  font-size: 1rem;
+}
+
+.navbar {
+  /* min-width: 485px; */
+  max-width: 100vw;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar-container{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+button.disabled {
+  /* Add your special styles for the disabled button here */
+  opacity: 0.1;
+  cursor: not-allowed;
+  /* Additional styles as needed */
+}
+
+/* home page element */
+.home-btn{
+  width:200px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.home-input{
+  width:100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  margin-right: 0;
+}
+.home .pm{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.search-btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+@media (max-width: 767px) {
+  .home-btn{
+    width:150px;
+  } 
+  .home-input{
+    width:100%;
+    margin:auto;
+  }
+  .home .pm {
+    margin-top:1rem;
+    padding-top: 1rem;
+  }
+  .search-btn {
+    margin-top: 1rem;
+
+    margin-bottom: 1rem;
+
+  }
+  
+}
+
+/* ------ Map ------ */
+.Map {
+  height: 93vh;
+  width: 100vw;
+}
+.map-container {
+  height: 100%;
+  width: 100%; 
+  position: relative;
+  /*flex: 1;*/
+}
+
+
+
+.map-button {
+  position: absolute;
+  top: 30px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the left position as needed */
+  z-index: 2; /* Ensure the button appears above the map */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; 
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-map-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.modal-map-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9998; 
+}
+
+.default-button {
+  background-color: #779DA6;
+  border: none;
+}
+
+.default-button:hover {
+  background-color: #5C7F89;
+}
+
+.nav-color {
+  background-color: #112426;
+}
+
+/* ----- all the small button on the map -----*/
+.map-btn{
+  position: absolute;
+  right: 10px;
+  z-index: 999;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #333;
+  cursor: pointer;
+  font-family: Roboto, Arial, sans-serif;
+  line-height: 38px;
+  padding: 0 12px;
+  text-align: center;
+  font-size: 14px;
+  width: 38px;
+  height: 38px;
+}
+
+.map-btn:hover {
+  background-color: #d8d8d8;
+}
+
+.map-btn:focus {
+  outline: none;
+  background-color: #d8d8d8;
+}
+
+/* ----- see map-key button -----*/
+.see-map-key {
+  top: 65px;
+  right: 65px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width:80px;
+}
+.open-modal-button {
+  top: 65px;
+}
+/* ----- set to nearby button -----*/
+.set-mylocation-button {
+  top: 115px;
+}
+/* ----- copy URL button -----*/
+.copy-URL {
+  top: 165px;
+}
+
+/* ----- My favorite button -----*/
+.see-my-favorite {
+  top: 215px;
+}
+/* ----- see station button -----*/
+.see-station {
+  top: 265px;
+}
+/* ----- direction button -----*/
+.see-direction {
+  top: 315px;
+}
+
+/* ----- FavoriteList Modal effect -----*/
+.favoriteList-stationInfo-card-title {
+  cursor: pointer;
+  color: #5f919d
+}
+.favoriteList-card-title:hover {
+  color: rgb(196, 157, 42);
+}
+
+
+
+@media (max-width: 767px) {
+  .map-btn {
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    padding: 0 7px;
+    right: 15px;
+  }
+  .see-map-key {
+    font-size: 10px;
+    font-weight: bold;
+    width: 60px;
+    height: 35px;
+    right: 15px;
+    top: 67px;
+  }
+  .open-modal-button {
+    top:115PX;
+  }
+  .set-mylocation-button {
+    top:155PX;
+  }
+  .copy-URL {
+    top:195PX;
+  }
+  .see-my-favorite {
+    top:235PX;
+  }
+  .see-station {
+    top: 275PX;
+  }
+  .see-direction {
+    top: 315PX;
+  }
+}
+
+/* ----- input-----*/
+.input-group {
+  z-index: 997;
+  align-items: center;
+  justify-content: center;
+}
+.input-group #search-input{
+  width:50vw;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ----- pagination -----*/
+.pagination .page-link {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.pagination .page-link:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: white;
+  color: gray;
+  border-color: white;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+.profile-container{
+  text-align: center;
+}
+.profile-img {
+  height: 200px;
+  width: 200px;
+  /* margin-left: 30%; */
+  margin-bottom: 20px;
+}
+
+/* ----- Favorite CSS -----*/
+.favorite [class*="fa-"] {
+  font-size:150%;
+}
+.favorite  .d-flex {
+  gap: 15px;
+  margin-bottom: 1rem;
+  font-size: 10px;
+}
+.favorite  h4{
+  font-size: 16px;
+}
+.favorite  p{
+  font-size: 12px;
+}
+
+
+/* ----- Help from home CSS -----*/
+.help [class*="fa-"] {
+  font-size:150%;
+}
+.help .d-flex {
+  gap: 15px;
+  margin-bottom: 1rem;
+  font-size: 10px;
+}
+.help h4{
+  font-size: 16px;
+}
+.help p{
+  font-size: 12px;
+}
+
+
+
+/* map-modal form  map */
+.map-modal .modal-dialog{
+  margin-left: 5rem;
+  margin-right: auto;
+  height: auto;
+  max-height: 800px;
+  width: 300px;
+  max-width: 800px;
+}
+.map-modal .modal-body{
+  height: auto;
+  max-height: 450px;
+}
+.map-modal [class*="fa-"] {
+  font-size:150%;
+}
+.map-modal .d-flex {
+  gap: 15px;
+  margin-bottom: 1rem;
+  font-size: 10px;
+}
+.map-modal h4{
+  font-size: 16px;
+}
+.map-modal p{
+  font-size: 12px;
+}
+.map-modal-legend span{
+  font-size: 0.7rem;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.map-modal .nearbyStation {
+  cursor: pointer;
+}
+.map-modal .nearbyStation:hover {
+  color: rgb(234, 189, 0);
+}
+
+/* ----- Loading spinner -----*/
+.spinner {
+  max-width: 200px;
+  margin: 30vh auto;
+}
+
+
+
+@media (max-width: 767px) {
+  /* ---- map control----*/
+  .map-container .gm-style-mtc,
+  .map-container .gmnoprint {
+    display: none !important;
+  }
+  /* map-modal */
+  .map-modal .modal-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: none;
+  }
+  .map-modal .modal-body {
+    height:29vh;
+  }
+  .map-modal .modal-content {
+      position: absolute;
+      bottom:10vh;
+  }
+  /* help form  home */
+  .help .modal-dialog {
+    height: 500px;
+    width: 80%;
+    max-width: none;
+    margin-left: 10%;
+    margin-right:auto;
+  }
+
+  /* favorite modal form  home */
+  .favorite .modal-dialog {
+    height: 500px;
+    width: 80%;
+    max-width: none;
+    margin-left: 10%;
+    margin-right:auto;
+  }
+
+  /* StationInfo modal form map */
+  #RouteModalContent {
+    margin-bottom: 10vh;
+  }
+  .map-modal h5{
+    font-size: 1rem;
+  }
+  .map-modal hr{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .map-modal h6{
+    font-size: 0.85rem;
+  }
+  .map-modal .d-flex{
+    margin-bottom: 0;
+  }
+  .card-text span{
+    font-size: 0.7rem;;
+  }
+  .card-body {
+    padding: 0.85rem;
+  }
+  .modal-footer .btn {
+    font-size: 0.5rem;
+  }
+  .navbar-text {
+    display: none;
+  }
+
+}
+
+
+  
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal-header {
+    padding: 0.5rem;
+  }
+  .modal-title {
+    line-height:1;
+}
+
+  /* help form  home */
+  .help .modal-dialog {
+    height: 600px;
+    width: 50%;
+    max-width: none;
+    margin-left: 25%;
+    margin-right:auto;
+  }
+  
+  /* map-modal form  map */
+  .map-modal .modal-dialog {
+    margin-left: 1rem;
+
+  }
+
+  /* favorite modal form  home */
+  .favorite  .modal-dialog {
+    height: 600px;
+    width: 50%;
+    max-width: none;
+    margin-left: 25%;
+    margin-right:auto;
+  }
+
+}
+
+  /* Styles for screens bigger than or equal to 992 pixels */
+@media (min-width: 992px) {
+  /* help form  home */
+  .help  .modal-dialog {
+    height: 700px;
+    width: 30%;
+    max-width: 800px;
+    margin-left: 5rem;
+    margin-right: auto;
+  }
+
+  /* favorite  modal form  home */
+  .favorite  .modal-dialog {
+    height: 700px;
+    width: 30%;
+    max-width: 800px;
+    margin-left: 5rem;
+    margin-right: auto;
+  }
+
+
+}
+
+.underline-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.user-text {
+  font-size: 1.25rem;
+}
+
